@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pruebas Bootstrap</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div id="divAgregarEmpresa">
+			<h2>Agregar Empresa</h2>
+			<form role="form">
+				<div class="form-group">
+					<label for="nombreEmpresa">Nombre Empresa:</label> <input
+						type="text" class="	form-control" id="nombreEmpresa"
+						placeholder="Ingrese nombre de la empresa" required>
+				</div>
+
+				<div class="form-group">
+					<label for="categoriaLocal">Categoría:</label> <select
+						class="form-control">
+						<option>Elije una categoría</option>
+						<option>Bar</option>
+						<option>Gimnasio</option>
+						<option>Restaurante</option>
+						<option>Supermercado</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="subCategoriaLocal">Subcategoría:</label> <select
+						class="form-control">
+						<option>Elije una subcategoría</option>
+						<option>Cervezas artesanales</option>
+						<option>Gimnasio express</option>
+						<option>Restaurante japones</option>
+						<option>Supermercado</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-success">Guardar
+					empresa</button>
+				<button type="button" class="btn btn-default" id="btnCancelar">Cancelar</button>
+			</form>
+		</div>
+		<div id="divAgregarLocal">
+			<h2>Agregar Local</h2>
+			<form role="form">
+
+				<div class="form-group">
+					<label for="empresalocal">Empresa:</label> <select
+						class="form-control">
+						<option>Elije una empresa</option>
+						<option>Barranco Beer Company</option>
+						<option>Golds Gym</option>
+						<option>Hanzo</option>
+						<option>Wong</option>
+					</select>
+					<button type="button" class="btn btn-info" aria-label="Left Align"
+						id="btnAgregarEmpresa">
+						<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+						Agregar Empresa
+					</button>
+				</div>
+
+				<div class="form-group">
+					<label for="nombreLocal">Nombre Local:</label> <input type="text"
+						class="	form-control" id="nombreLocal"
+						placeholder="Ingrese nombre del local" required>
+
+					<p class="form-control-static">Categoría</p>
+					<p class="form-control-static">Subcategoría</p>
+				</div>
+
+				<div class="form-group">
+					<label for="descripcionLocal">Descripción:</label>
+					<textarea class="form-control" rows="3" id="descripcionLocal"
+						required></textarea>
+				</div>
+
+				<div class="form-group">
+					<button type="button" class="btn btn-info" onclick="getLocation()">Obtener
+						ubicación:</button>
+					<br> <label for="labelLatitudLocal">Latitud:</label> <label
+						for="latitudLocal" id="latitudLocal"></label> <label
+						for="labelLongitudLocal">Longitud:</label> <label
+						for="longitudLocal" id="longitudLocal"></label>
+				</div>
+
+				<div class="form-group">
+					<label for="direccionLocal">Dirección:</label> <input type="text"
+						class="form-control" id="direccionLocal"
+						placeholder="Ingrese la dirección del local" required>
+				</div>
+
+				<div class="form-group">
+					<label for="distritolocal">Distrito:</label> <select
+						class="form-control">
+						<option>Elije un distrito</option>
+						<option>Barranco</option>
+						<option>Miraflores</option>
+						<option>San Isidro</option>
+						<option>Surco</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="telefonoLocal1">Teléfono 1:</label> <input type="tel"
+						class="form-control" id="telefonoLocal1"
+						placeholder="Ingrese el teléfono 1 del local" pattern="[0-9]{7}"
+						required>
+				</div>
+
+				<div class="form-group">
+					<label for="telefonoLocal2">Teléfono 2:</label> <input type="tel"
+						class="form-control" id="telefonoLocal2"
+						placeholder="Ingrese el teléfono 2 del local" pattern="[0-9]{7}">
+				</div>
+
+				<div class="form-group">
+					<label for="paginaWebLocal">Página Web:</label> <input type="url"
+						class="form-control" id="paginaWebLocal"
+						placeholder="Ingrese la web del local" required>
+				</div>
+
+				<div class="form-group">
+					<label for="FotoLocal1">Foto 1:</label> <input type="file"
+						class="form-control" id="FotoLocal1" required>
+				</div>
+
+				<div class="form-group">
+					<label for="FotoLocal2">Foto 2:</label> <input type="file"
+						class="form-control" id="FotoLocal2" required>
+				</div>
+
+				<button type="submit" class="btn btn-success">Guardar</button>
+			</form>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script type="text/javascript" src="js/functions.js"></script>
+</body>
+</html>
